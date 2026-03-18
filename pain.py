@@ -13,7 +13,7 @@ def check_user(login, password):
         user="postgres",
         password="password",
         host="localhost",
-        port=3005
+        port=3000
     )
     cur = conn.cursor()
     cur.execute('SELECT * FROM "Users" WHERE email=%s AND password_hash=%s', (login, password))
